@@ -1,0 +1,3 @@
+Airthings indoor air quality monitors tell you what's in your air. They measure pollutants like radon gas, fine particulate matter (PM2.5), and airborne chemicals (VOCs) as well as environmental factors like carbon dioxide levels, temperature and humidity.
+
+Use your Airthings live air quality measurements to trigger your Homey-enabled devices to address air quality issues when they arise. Keep your home's air healthy and comfortable by minimizing airborne health risks, irritants and allergens. Your home's air is so much more than oxygen - ensure that it stays not only safe, but also promotes restful sleep and day-to-day wellbeing.
