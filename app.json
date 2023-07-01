@@ -1,1 +1,1503 @@
-{"_comment":"This file is generated. Please edit .homeycompose/app.json instead.","id":"com.airthings.cloud","version":"1.2.1","compatibility":">=7.4.0","platforms":["local","cloud"],"sdk":3,"name":{"en":"Airthings"},"brandColor":"#ECC100","description":{"en":"Empowering the world to breathe better"},"category":["appliances","climate"],"permissions":[],"images":{"small":"/assets/images/small.png","large":"/assets/images/large.png","xlarge":"/assets/images/xlarge.png"},"icon":"/assets/icon.svg","author":{"name":"Airthings AS"},"support":"mailto:homey-airthings@drenso.nl","contributors":{"developers":[{"name":"CRUDE AS / Vegard Brenden"}]},"flow":{"triggers":[{"title":{"en":"Humidity alarm turned off"},"args":[{"name":"device","type":"device","filter":"driver_id=cloud_view_series|cloud_wave_series&capabilities=alarm_humidity"}],"id":"alarm_humidity_false"},{"title":{"en":"Humidity alarm turned on"},"args":[{"name":"device","type":"device","filter":"driver_id=cloud_view_series|cloud_wave_series&capabilities=alarm_humidity"}],"id":"alarm_humidity_true"},{"title":{"en":"Mold risk alarm turned off"},"args":[{"name":"device","type":"device","filter":"driver_id=cloud_view_series|cloud_wave_series&capabilities=alarm_mold_risk"}],"id":"alarm_mold_risk_false"},{"title":{"en":"Mold risk alarm turned on"},"args":[{"name":"device","type":"device","filter":"driver_id=cloud_view_series|cloud_wave_series&capabilities=alarm_mold_risk"}],"id":"alarm_mold_risk_true"},{"title":{"en":"PM1 alarm turned off"},"args":[{"name":"device","type":"device","filter":"driver_id=cloud_view_series|cloud_wave_series&capabilities=alarm_pm1"}],"id":"alarm_pm1_false"},{"title":{"en":"PM1 alarm turned on"},"args":[{"name":"device","type":"device","filter":"driver_id=cloud_view_series|cloud_wave_series&capabilities=alarm_pm1"}],"id":"alarm_pm1_true"},{"title":{"en":"Radon alarm turned off"},"args":[{"name":"device","type":"device","filter":"driver_id=cloud_view_series|cloud_wave_series&capabilities=alarm_radon_display"}],"id":"alarm_radon_display_false"},{"title":{"en":"Radon alarm turned on"},"args":[{"name":"device","type":"device","filter":"driver_id=cloud_view_series|cloud_wave_series&capabilities=alarm_radon_display"}],"id":"alarm_radon_display_true"},{"title":{"en":"Radon alarm (Bq/m³) turned off"},"deprecated":true,"args":[{"name":"device","type":"device","filter":"driver_id=cloud_view_series|cloud_wave_series&capabilities=alarm_radon"}],"id":"alarm_radon_false"},{"title":{"en":"Radon alarm (Bq/m³) turned on"},"deprecated":true,"args":[{"name":"device","type":"device","filter":"driver_id=cloud_view_series|cloud_wave_series&capabilities=alarm_radon"}],"id":"alarm_radon_true"},{"title":{"en":"Radon alarm (pCi/L) turned off"},"deprecated":true,"args":[{"name":"device","type":"device","filter":"driver_id=cloud_view_series|cloud_wave_series&capabilities=alarm_radon_us"}],"id":"alarm_radon_us_false"},{"title":{"en":"Radon alarm (pCi/L) turned on"},"deprecated":true,"args":[{"name":"device","type":"device","filter":"driver_id=cloud_view_series|cloud_wave_series&capabilities=alarm_radon_us"}],"id":"alarm_radon_us_true"},{"title":{"en":"Temperature alarm turned off"},"args":[{"name":"device","type":"device","filter":"driver_id=cloud_view_series|cloud_wave_series&capabilities=alarm_temperature"}],"id":"alarm_temperature_false"},{"title":{"en":"Temperature alarm turned on"},"args":[{"name":"device","type":"device","filter":"driver_id=cloud_view_series|cloud_wave_series&capabilities=alarm_temperature"}],"id":"alarm_temperature_true"},{"title":{"en":"VOC alarm turned off"},"args":[{"name":"device","type":"device","filter":"driver_id=cloud_view_series|cloud_wave_series&capabilities=alarm_voc"}],"id":"alarm_voc_false"},{"title":{"en":"VOC alarm turned on"},"args":[{"name":"device","type":"device","filter":"driver_id=cloud_view_series|cloud_wave_series&capabilities=alarm_voc"}],"id":"alarm_voc_true"},{"title":{"en":"The mold risk value has changed"},"titleFormatted":{"en":"The mold risk value has changed"},"highlight":true,"tokens":[{"name":"measure_mold_risk","title":{"en":"Mold risk"},"type":"number","example":2}],"args":[{"name":"device","type":"device","filter":"driver_id=cloud_view_series|cloud_wave_series&capabilities=measure_mold_risk"}],"id":"measure_mold_risk_changed"},{"title":{"en":"The PM1 value has changed","nl":"De PM1 waarde is veranderd","de":"Der PM1-Wert hat sich geändert","fr":"La valeur PM1 a changé","it":"Il valore di PM1 è cambiato","sv":"PM1-värdet har ändrats","no":"PM1-verdien er endret","es":"El valor de PM1 ha cambiado","da":"PM1-værdien har ændret sig","ru":"Значение ТЧ 1 изменилось","pl":"Zmiana poziomu stężenia PM1"},"titleFormatted":{"en":"The PM1 value has changed","nl":"De PM1 waarde is veranderd","de":"Der PM1-Wert hat sich geändert","fr":"La valeur PM1 a changé","it":"Il valore di PM1 è cambiato","sv":"PM1-värdet har ändrats","no":"PM1-verdien er endret","es":"El valor de PM1 ha cambiado","da":"PM1-værdien har ændret sig","ru":"Значение ТЧ 1 изменилось","pl":"Zmiana poziomu stężenia PM1"},"highlight":true,"tokens":[{"name":"measure_pm1","title":{"en":"PM1","nl":"PM1","de":"PM1","fr":"PM1","it":"PM1","sv":"PM1","no":"PM1","es":"PM1","ru":"ТЧ 1","pl":"PM1"},"type":"number","example":2}],"args":[{"name":"device","type":"device","filter":"driver_id=cloud_view_series|cloud_wave_series&capabilities=measure_pm1"}],"id":"measure_pm1_changed"},{"title":{"en":"The radon level (Bq/m³) has changed"},"titleFormatted":{"en":"The radon level (Bq/m³) has changed"},"tokens":[{"name":"measure_radon","title":{"en":"Radon level"},"type":"number","example":2}],"args":[{"name":"device","type":"device","filter":"driver_id=cloud_view_series|cloud_wave_series&capabilities=measure_radon"}],"id":"measure_radon_changed"},{"title":{"en":"The radon level has changed"},"titleFormatted":{"en":"The radon level has changed"},"highlight":true,"args":[{"name":"device","type":"device","filter":"driver_id=cloud_view_series|cloud_wave_series&capabilities=measure_radon_display"}],"id":"measure_radon_display_changed"},{"title":{"en":"The radon level (pCi/L) has changed"},"titleFormatted":{"en":"The radon level (pCi/L) has changed"},"tokens":[{"name":"measure_radon","title":{"en":"Radon level"},"type":"number","example":2}],"args":[{"name":"device","type":"device","filter":"driver_id=cloud_view_series|cloud_wave_series&capabilities=measure_radon_us"}],"id":"measure_radon_us_changed"},{"title":{"en":"The VOC value has changed"},"titleFormatted":{"en":"The VOC value has changed"},"highlight":true,"tokens":[{"name":"measure_voc","title":{"en":"VOC concentration"},"type":"number","example":2}],"args":[{"name":"device","type":"device","filter":"driver_id=cloud_view_series|cloud_wave_series&capabilities=measure_voc"}],"id":"measure_voc_changed"}],"conditions":[{"title":{"en":"The humidity alarm is !{{on|off}}"},"args":[{"name":"device","type":"device","filter":"driver_id=cloud_view_series|cloud_wave_series&capabilities=alarm_humidity"}],"id":"alarm_humidity"},{"title":{"en":"The mold risk alarm is !{{on|off}}"},"args":[{"name":"device","type":"device","filter":"driver_id=cloud_view_series|cloud_wave_series&capabilities=alarm_mold_risk"}],"id":"alarm_mold_risk"},{"title":{"en":"The PM1 alarm is !{{on|off}}"},"args":[{"name":"device","type":"device","filter":"driver_id=cloud_view_series|cloud_wave_series&capabilities=alarm_pm1"}],"id":"alarm_pm1"},{"title":{"en":"The radon alarm (Bq/m³) is !{{on|off}}"},"args":[{"name":"device","type":"device","filter":"driver_id=cloud_view_series|cloud_wave_series&capabilities=alarm_radon"}],"id":"alarm_radon"},{"title":{"en":"The radon alarm (pCi/L) is !{{on|off}}"},"args":[{"name":"device","type":"device","filter":"driver_id=cloud_view_series|cloud_wave_series&capabilities=alarm_radon_us"}],"id":"alarm_radon_us"},{"title":{"en":"The temperature alarm is !{{on|off}}"},"args":[{"name":"device","type":"device","filter":"driver_id=cloud_view_series|cloud_wave_series&capabilities=alarm_temperature"}],"id":"alarm_temperature"},{"title":{"en":"The VOC alarm is !{{on|off}}"},"args":[{"name":"device","type":"device","filter":"driver_id=cloud_view_series|cloud_wave_series&capabilities=alarm_voc"}],"id":"alarm_voc"}]},"drivers":[{"platforms":["local","cloud"],"connectivity":["cloud"],"images":{"xlarge":"/drivers/cloud_view_series/assets/images/xlarge.png","large":"/drivers/cloud_view_series/assets/images/large.png","small":"/drivers/cloud_view_series/assets/images/small.png"},"icon":"/drivers/cloud_view_series/assets/icon.svg","class":"sensor","energy":{"batteries":["OTHER"]},"pair":[{"id":"login_oauth2","template":"login_oauth2"},{"id":"list_devices","template":"list_devices","navigation":{"next":"add_devices"}},{"id":"add_devices","template":"add_devices"}],"repair":[{"id":"login_oauth2","template":"login_oauth2"}],"name":{"en":"View Series"},"capabilities":["measure_radon_display","alarm_radon_display","measure_radon","alarm_radon","measure_radon_us","alarm_radon_us","measure_co2","alarm_co2","measure_voc","alarm_voc","measure_pm25","alarm_pm25","measure_pm1","alarm_pm1","measure_humidity","alarm_humidity","measure_temperature","alarm_temperature","measure_pressure","measure_battery"],"id":"cloud_view_series","settings":[{"type":"group","label":{"en":"Radon"},"children":[{"id":"radon_available","type":"label","label":{"en":"Sensor alarm available"},"hint":{"en":"Indicates whether this sensor alarm is available for your device."},"value":"No"},{"id":"radon_units","type":"dropdown","label":{"en":"Display units"},"value":"metric","values":[{"id":"metric","label":{"en":"Bq/m³"}},{"id":"imperial","label":{"en":"pCi/L"}}]},{"id":"radon_threshold","type":"number","label":{"en":"Alarm threshold"},"hint":{"en":"< 100 is great, 100 - 150 is okay and >= 150 is bad."},"value":150,"min":1,"step":1,"units":{"en":"Bq/m³"}},{"id":"radon_us_threshold","type":"number","label":{"en":"Alarm threshold"},"hint":{"en":"< 2.5 is great, 2.5 - 4 is okay and >= 4 is bad."},"value":4,"min":0.1,"step":0.1,"units":{"en":"pCi/L"}}]},{"type":"group","label":{"en":"CO2"},"children":[{"id":"co2_available","type":"label","label":{"en":"Sensor alarm available"},"hint":{"en":"Indicates whether this sensor alarm is available for your device."},"value":"No"},{"id":"co2_threshold","type":"number","label":{"en":"Alarm threshold"},"hint":{"en":"< 800 is great, 180 - 1000 is okay and >= 1000 is bad."},"value":1000,"min":1,"units":{"en":"ppm"}}]},{"type":"group","label":{"en":"VOC"},"children":[{"id":"voc_available","type":"label","label":{"en":"Sensor alarm available"},"hint":{"en":"Indicates whether this sensor alarm is available for your device."},"value":"No"},{"id":"voc_threshold","type":"number","label":{"en":"Alarm threshold"},"hint":{"en":"< 250 is great, 250 - 2000 is okay and >= 2000 is bad."},"value":2000,"min":1,"units":{"en":"ppb"}}]},{"type":"group","label":{"en":"PM2.5"},"children":[{"id":"pm25_available","type":"label","label":{"en":"Sensor alarm available"},"hint":{"en":"Indicates whether this sensor alarm is available for your device."},"value":"No"},{"id":"pm25_threshold","type":"number","label":{"en":"Alarm threshold"},"hint":{"en":"< 10 is great, 10 - 35 is okay and >= 35 is bad."},"value":35,"min":1,"units":{"en":"μg/m³"}}]},{"type":"group","label":{"en":"PM1"},"children":[{"id":"pm1_available","type":"label","label":{"en":"Sensor alarm available"},"hint":{"en":"Indicates whether this sensor alarm is available for your device."},"value":"No"},{"id":"pm1_threshold","type":"number","label":{"en":"Alarm threshold"},"hint":{"en":"< 10 is great, 10 - 35 is okay and >= 35 is bad."},"value":35,"min":1,"units":{"en":"μg/m³"}}]},{"type":"group","label":{"en":"Humidity"},"children":[{"id":"humidity_available","type":"label","label":{"en":"Sensor alarm available"},"hint":{"en":"Indicates whether this sensor alarm is available for your device."},"value":"No"},{"id":"humidity_high_threshold","type":"number","label":{"en":"High alarm threshold"},"hint":{"en":"< 60 is great, 60 - 70 is okay and >= 70 is bad."},"value":70,"min":50,"max":100,"units":{"en":"%"}},{"id":"humidity_low_threshold","type":"number","label":{"en":"Low alarm threshold"},"hint":{"en":"< 25 is bad, 25 - 30 is okay and >= 30 is great."},"value":25,"min":0,"max":50,"units":{"en":"%"}}]},{"type":"group","label":{"en":"Temperature"},"children":[{"id":"temperature_available","type":"label","label":{"en":"Sensor alarm available"},"hint":{"en":"Indicates whether this sensor alarm is available for your device."},"value":"No"},{"id":"temperature_high_threshold","type":"number","label":{"en":"High alarm threshold"},"hint":{"en":"< 18 is cold, 18 - 25 is okay and >= 25 is hot."},"value":25,"units":{"en":"°C"}},{"id":"temperature_low_threshold","type":"number","label":{"en":"High alarm threshold"},"hint":{"en":"< 18 is cold, 18 - 25 is okay and >= 25 is hot."},"value":18,"units":{"en":"°C"}}]}]},{"platforms":["local","cloud"],"connectivity":["cloud"],"images":{"xlarge":"/drivers/cloud_wave_series/assets/images/xlarge.png","large":"/drivers/cloud_wave_series/assets/images/large.png","small":"/drivers/cloud_wave_series/assets/images/small.png"},"icon":"/drivers/cloud_wave_series/assets/icon.svg","class":"sensor","energy":{"batteries":["OTHER"]},"pair":[{"id":"login_oauth2","template":"login_oauth2"},{"id":"list_devices","template":"list_devices","navigation":{"next":"add_devices"}},{"id":"add_devices","template":"add_devices"}],"repair":[{"id":"login_oauth2","template":"login_oauth2"}],"name":{"en":"Wave Series"},"capabilities":["measure_mold_risk","alarm_mold_risk","measure_radon_display","alarm_radon_display","measure_radon","alarm_radon","measure_radon_us","alarm_radon_us","measure_co2","alarm_co2","measure_voc","alarm_voc","measure_humidity","alarm_humidity","measure_temperature","alarm_temperature","measure_pressure","measure_battery"],"id":"cloud_wave_series","settings":[{"type":"group","label":{"en":"Mold risk"},"children":[{"id":"mold_risk_available","type":"label","label":{"en":"Sensor alarm available"},"hint":{"en":"Indicates whether this sensor alarm is available for your device."},"value":"No"},{"id":"mold_risk_threshold","type":"number","label":{"en":"Alarm threshold"},"hint":{"en":"< 3 is great, 3 - 6 is okay and >= 6 is bad."},"value":6,"min":0,"max":10}]},{"type":"group","label":{"en":"Radon"},"children":[{"id":"radon_available","type":"label","label":{"en":"Sensor alarm available"},"hint":{"en":"Indicates whether this sensor alarm is available for your device."},"value":"No"},{"id":"radon_units","type":"dropdown","label":{"en":"Display units"},"value":"metric","values":[{"id":"metric","label":{"en":"Bq/m³"}},{"id":"imperial","label":{"en":"pCi/L"}}]},{"id":"radon_threshold","type":"number","label":{"en":"Alarm threshold"},"hint":{"en":"< 100 is great, 100 - 150 is okay and >= 150 is bad."},"value":150,"min":1,"step":1,"units":{"en":"Bq/m³"}},{"id":"radon_us_threshold","type":"number","label":{"en":"Alarm threshold"},"hint":{"en":"< 2.5 is great, 2.5 - 4 is okay and >= 4 is bad."},"value":4,"min":0.1,"step":0.1,"units":{"en":"pCi/L"}}]},{"type":"group","label":{"en":"CO2"},"children":[{"id":"co2_available","type":"label","label":{"en":"Sensor alarm available"},"hint":{"en":"Indicates whether this sensor alarm is available for your device."},"value":"No"},{"id":"co2_threshold","type":"number","label":{"en":"Alarm threshold"},"hint":{"en":"< 800 is great, 180 - 1000 is okay and >= 1000 is bad."},"value":1000,"min":1,"units":{"en":"ppm"}}]},{"type":"group","label":{"en":"VOC"},"children":[{"id":"voc_available","type":"label","label":{"en":"Sensor alarm available"},"hint":{"en":"Indicates whether this sensor alarm is available for your device."},"value":"No"},{"id":"voc_threshold","type":"number","label":{"en":"Alarm threshold"},"hint":{"en":"< 250 is great, 250 - 2000 is okay and >= 2000 is bad."},"value":2000,"min":1,"units":{"en":"ppb"}}]},{"type":"group","label":{"en":"Humidity"},"children":[{"id":"humidity_available","type":"label","label":{"en":"Sensor alarm available"},"hint":{"en":"Indicates whether this sensor alarm is available for your device."},"value":"No"},{"id":"humidity_high_threshold","type":"number","label":{"en":"High alarm threshold"},"hint":{"en":"< 60 is great, 60 - 70 is okay and >= 70 is bad."},"value":70,"min":50,"max":100,"units":{"en":"%"}},{"id":"humidity_low_threshold","type":"number","label":{"en":"Low alarm threshold"},"hint":{"en":"< 25 is bad, 25 - 30 is okay and >= 30 is great."},"value":25,"min":0,"max":50,"units":{"en":"%"}}]},{"type":"group","label":{"en":"Temperature"},"children":[{"id":"temperature_available","type":"label","label":{"en":"Sensor alarm available"},"hint":{"en":"Indicates whether this sensor alarm is available for your device."},"value":"No"},{"id":"temperature_high_threshold","type":"number","label":{"en":"High alarm threshold"},"hint":{"en":"< 18 is cold, 18 - 25 is okay and >= 25 is hot."},"value":25,"units":{"en":"°C"}},{"id":"temperature_low_threshold","type":"number","label":{"en":"High alarm threshold"},"hint":{"en":"< 18 is cold, 18 - 25 is okay and >= 25 is hot."},"value":18,"units":{"en":"°C"}}]}]}],"capabilities":{"alarm_humidity":{"type":"boolean","title":{"en":"Humidity alarm"},"getable":true,"setable":false,"uiComponent":"sensor","icon":"/assets/icons/humidity.svg","insights":true,"insightsTitleTrue":{"en":"Humidity alarm triggered"},"insightsTitleFalse":{"en":"Humidity alarm cleared"}},"alarm_mold_risk":{"type":"boolean","title":{"en":"Mold risk alarm"},"getable":true,"setable":false,"uiComponent":"sensor","icon":"/assets/icons/mold_risk.svg","insights":true,"insightsTitleTrue":{"en":"Mold risk alarm triggered"},"insightsTitleFalse":{"en":"Mold risk alarm cleared"}},"alarm_pm1":{"type":"boolean","title":{"en":"PM1 alarm"},"getable":true,"setable":false,"uiComponent":"sensor","icon":"/assets/icons/pm.svg","insights":true,"insightsTitleTrue":{"en":"PM1 alarm triggered"},"insightsTitleFalse":{"en":"PM1 alarm cleared"}},"alarm_radon":{"type":"boolean","title":{"en":"Radon alarm (Bq/m³)"},"getable":true,"setable":false,"uiComponent":null,"icon":"/assets/icons/radon.svg","insights":false},"alarm_radon_display":{"type":"boolean","title":{"en":"Radon alarm"},"getable":true,"setable":false,"uiComponent":"sensor","icon":"/assets/icons/radon.svg","insights":true,"insightsTitleTrue":{"en":"Radon alarm triggered"},"insightsTitleFalse":{"en":"Radon alarm cleared"}},"alarm_radon_us":{"type":"boolean","title":{"en":"Radon alarm (pCi/L)"},"getable":true,"setable":false,"uiComponent":null,"icon":"/assets/icons/radon.svg","insights":false},"alarm_temperature":{"type":"boolean","title":{"en":"Temperature alarm"},"getable":true,"setable":false,"uiComponent":"sensor","icon":"/assets/icons/temp.svg","insights":true,"insightsTitleTrue":{"en":"Temperature alarm triggered"},"insightsTitleFalse":{"en":"Temperature alarm cleared"}},"alarm_voc":{"type":"boolean","title":{"en":"VOC alarm"},"getable":true,"setable":false,"uiComponent":"sensor","icon":"/assets/icons/voc.svg","insights":true,"insightsTitleTrue":{"en":"VOC alarm triggered"},"insightsTitleFalse":{"en":"VOC alarm cleared"}},"measure_mold_risk":{"type":"number","title":{"en":"Mold risk"},"desc":{"en":"Mold risk (0 - 10)"},"insights":true,"chartType":"spline","getable":true,"setable":false,"uiComponent":"sensor","icon":"/assets/icons/mold_risk.svg"},"measure_pm1":{"type":"number","title":{"en":"PM1","nl":"PM1","de":"PM1","fr":"PM1","it":"PM1","sv":"PM1","no":"PM1","es":"PM1","ru":"ТЧ 1","pl":"PM1"},"units":{"en":"μg/m³","ru":"мкг/м³"},"insights":true,"desc":{"en":"Atmospheric particulate matter (μg/m³)","nl":"Deeltjesvormige luchtverontreiniging (μg/m³)","de":"Atmosphärischer Feinstaub (μg/m³)","fr":"Particules en suspension (μg/m³)","it":"Particolato atmosferico (μg/m³)","sv":"Atmosfäriskt partikelämne (μg/m³)","no":"Atmosfæriske partikler (μg/m³)","es":"Partículas atmosféricas (μg/m³)","da":"Atmosfæriske partikler (μg/m³)","ru":"Атмосферные твердые частицы (мкг/м³)","pl":"Pył zawieszony (μg/m³)"},"chartType":"spline","decimals":2,"getable":true,"setable":false,"uiComponent":"sensor","icon":"/assets/icons/pm.svg"},"measure_radon":{"type":"number","title":{"en":"Radon"},"units":{"en":"Bq/m³"},"insights":true,"desc":{"en":"Radon level (Bq/m³)"},"chartType":"spline","decimals":2,"getable":true,"setable":false,"uiComponent":null,"icon":"/assets/icons/radon.svg"},"measure_radon_display":{"type":"string","title":{"en":"Radon"},"insights":false,"desc":{"en":"Radon level"},"getable":true,"setable":false,"uiComponent":"sensor","icon":"/assets/icons/radon.svg","preventTag":true,"preventInsights":true},"measure_radon_us":{"type":"number","title":{"en":"Radon"},"units":{"en":"pCi/L"},"insights":true,"desc":{"en":"Radon level (pCi/L)"},"chartType":"spline","decimals":2,"getable":true,"setable":false,"uiComponent":null,"icon":"/assets/icons/radon.svg"},"measure_voc":{"type":"number","title":{"en":"VOC"},"units":{"en":"ppb"},"insights":true,"desc":{"en":"Volatile organic compound concentration (ppb)"},"chartType":"spline","decimals":2,"getable":true,"setable":false,"uiComponent":"sensor","icon":"/assets/icons/voc.svg"}}}
+{
+  "_comment": "This file is generated. Please edit .homeycompose/app.json instead.",
+  "id": "com.airthings.cloud",
+  "version": "1.2.1",
+  "compatibility": ">=7.4.0",
+  "platforms": [
+    "local",
+    "cloud"
+  ],
+  "sdk": 3,
+  "name": {
+    "en": "Airthings"
+  },
+  "brandColor": "#ECC100",
+  "description": {
+    "en": "Empowering the world to breathe better"
+  },
+  "category": [
+    "appliances",
+    "climate"
+  ],
+  "permissions": [],
+  "images": {
+    "small": "/assets/images/small.png",
+    "large": "/assets/images/large.png",
+    "xlarge": "/assets/images/xlarge.png"
+  },
+  "icon": "/assets/icon.svg",
+  "author": {
+    "name": "Airthings AS"
+  },
+  "support": "mailto:homey-airthings@drenso.nl",
+  "contributors": {
+    "developers": [
+      {
+        "name": "CRUDE AS / Vegard Brenden"
+      }
+    ]
+  },
+  "flow": {
+    "triggers": [
+      {
+        "title": {
+          "en": "Humidity alarm turned off"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=cloud_view_series|cloud_wave_series&capabilities=alarm_humidity"
+          }
+        ],
+        "id": "alarm_humidity_false"
+      },
+      {
+        "title": {
+          "en": "Humidity alarm turned on"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=cloud_view_series|cloud_wave_series&capabilities=alarm_humidity"
+          }
+        ],
+        "id": "alarm_humidity_true"
+      },
+      {
+        "title": {
+          "en": "Mold risk alarm turned off"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=cloud_view_series|cloud_wave_series&capabilities=alarm_mold_risk"
+          }
+        ],
+        "id": "alarm_mold_risk_false"
+      },
+      {
+        "title": {
+          "en": "Mold risk alarm turned on"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=cloud_view_series|cloud_wave_series&capabilities=alarm_mold_risk"
+          }
+        ],
+        "id": "alarm_mold_risk_true"
+      },
+      {
+        "title": {
+          "en": "PM1 alarm turned off"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=cloud_view_series|cloud_wave_series&capabilities=alarm_pm1"
+          }
+        ],
+        "id": "alarm_pm1_false"
+      },
+      {
+        "title": {
+          "en": "PM1 alarm turned on"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=cloud_view_series|cloud_wave_series&capabilities=alarm_pm1"
+          }
+        ],
+        "id": "alarm_pm1_true"
+      },
+      {
+        "title": {
+          "en": "Radon alarm turned off"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=cloud_view_series|cloud_wave_series&capabilities=alarm_radon_display"
+          }
+        ],
+        "id": "alarm_radon_display_false"
+      },
+      {
+        "title": {
+          "en": "Radon alarm turned on"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=cloud_view_series|cloud_wave_series&capabilities=alarm_radon_display"
+          }
+        ],
+        "id": "alarm_radon_display_true"
+      },
+      {
+        "title": {
+          "en": "Radon alarm (Bq/m³) turned off"
+        },
+        "deprecated": true,
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=cloud_view_series|cloud_wave_series&capabilities=alarm_radon"
+          }
+        ],
+        "id": "alarm_radon_false"
+      },
+      {
+        "title": {
+          "en": "Radon alarm (Bq/m³) turned on"
+        },
+        "deprecated": true,
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=cloud_view_series|cloud_wave_series&capabilities=alarm_radon"
+          }
+        ],
+        "id": "alarm_radon_true"
+      },
+      {
+        "title": {
+          "en": "Radon alarm (pCi/L) turned off"
+        },
+        "deprecated": true,
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=cloud_view_series|cloud_wave_series&capabilities=alarm_radon_us"
+          }
+        ],
+        "id": "alarm_radon_us_false"
+      },
+      {
+        "title": {
+          "en": "Radon alarm (pCi/L) turned on"
+        },
+        "deprecated": true,
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=cloud_view_series|cloud_wave_series&capabilities=alarm_radon_us"
+          }
+        ],
+        "id": "alarm_radon_us_true"
+      },
+      {
+        "title": {
+          "en": "Temperature alarm turned off"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=cloud_view_series|cloud_wave_series&capabilities=alarm_temperature"
+          }
+        ],
+        "id": "alarm_temperature_false"
+      },
+      {
+        "title": {
+          "en": "Temperature alarm turned on"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=cloud_view_series|cloud_wave_series&capabilities=alarm_temperature"
+          }
+        ],
+        "id": "alarm_temperature_true"
+      },
+      {
+        "title": {
+          "en": "VOC alarm turned off"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=cloud_view_series|cloud_wave_series&capabilities=alarm_voc"
+          }
+        ],
+        "id": "alarm_voc_false"
+      },
+      {
+        "title": {
+          "en": "VOC alarm turned on"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=cloud_view_series|cloud_wave_series&capabilities=alarm_voc"
+          }
+        ],
+        "id": "alarm_voc_true"
+      },
+      {
+        "title": {
+          "en": "The mold risk value has changed"
+        },
+        "titleFormatted": {
+          "en": "The mold risk value has changed"
+        },
+        "highlight": true,
+        "tokens": [
+          {
+            "name": "measure_mold_risk",
+            "title": {
+              "en": "Mold risk"
+            },
+            "type": "number",
+            "example": 2
+          }
+        ],
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=cloud_view_series|cloud_wave_series&capabilities=measure_mold_risk"
+          }
+        ],
+        "id": "measure_mold_risk_changed"
+      },
+      {
+        "title": {
+          "en": "The PM1 value has changed",
+          "nl": "De PM1 waarde is veranderd",
+          "de": "Der PM1-Wert hat sich geändert",
+          "fr": "La valeur PM1 a changé",
+          "it": "Il valore di PM1 è cambiato",
+          "sv": "PM1-värdet har ändrats",
+          "no": "PM1-verdien er endret",
+          "es": "El valor de PM1 ha cambiado",
+          "da": "PM1-værdien har ændret sig",
+          "ru": "Значение ТЧ 1 изменилось",
+          "pl": "Zmiana poziomu stężenia PM1"
+        },
+        "titleFormatted": {
+          "en": "The PM1 value has changed",
+          "nl": "De PM1 waarde is veranderd",
+          "de": "Der PM1-Wert hat sich geändert",
+          "fr": "La valeur PM1 a changé",
+          "it": "Il valore di PM1 è cambiato",
+          "sv": "PM1-värdet har ändrats",
+          "no": "PM1-verdien er endret",
+          "es": "El valor de PM1 ha cambiado",
+          "da": "PM1-værdien har ændret sig",
+          "ru": "Значение ТЧ 1 изменилось",
+          "pl": "Zmiana poziomu stężenia PM1"
+        },
+        "highlight": true,
+        "tokens": [
+          {
+            "name": "measure_pm1",
+            "title": {
+              "en": "PM1",
+              "nl": "PM1",
+              "de": "PM1",
+              "fr": "PM1",
+              "it": "PM1",
+              "sv": "PM1",
+              "no": "PM1",
+              "es": "PM1",
+              "ru": "ТЧ 1",
+              "pl": "PM1"
+            },
+            "type": "number",
+            "example": 2
+          }
+        ],
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=cloud_view_series|cloud_wave_series&capabilities=measure_pm1"
+          }
+        ],
+        "id": "measure_pm1_changed"
+      },
+      {
+        "title": {
+          "en": "The radon level (Bq/m³) has changed"
+        },
+        "titleFormatted": {
+          "en": "The radon level (Bq/m³) has changed"
+        },
+        "tokens": [
+          {
+            "name": "measure_radon",
+            "title": {
+              "en": "Radon level"
+            },
+            "type": "number",
+            "example": 2
+          }
+        ],
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=cloud_view_series|cloud_wave_series&capabilities=measure_radon"
+          }
+        ],
+        "id": "measure_radon_changed"
+      },
+      {
+        "title": {
+          "en": "The radon level has changed"
+        },
+        "titleFormatted": {
+          "en": "The radon level has changed"
+        },
+        "highlight": true,
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=cloud_view_series|cloud_wave_series&capabilities=measure_radon_display"
+          }
+        ],
+        "id": "measure_radon_display_changed"
+      },
+      {
+        "title": {
+          "en": "The radon level (pCi/L) has changed"
+        },
+        "titleFormatted": {
+          "en": "The radon level (pCi/L) has changed"
+        },
+        "tokens": [
+          {
+            "name": "measure_radon",
+            "title": {
+              "en": "Radon level"
+            },
+            "type": "number",
+            "example": 2
+          }
+        ],
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=cloud_view_series|cloud_wave_series&capabilities=measure_radon_us"
+          }
+        ],
+        "id": "measure_radon_us_changed"
+      },
+      {
+        "title": {
+          "en": "The VOC value has changed"
+        },
+        "titleFormatted": {
+          "en": "The VOC value has changed"
+        },
+        "highlight": true,
+        "tokens": [
+          {
+            "name": "measure_voc",
+            "title": {
+              "en": "VOC concentration"
+            },
+            "type": "number",
+            "example": 2
+          }
+        ],
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=cloud_view_series|cloud_wave_series&capabilities=measure_voc"
+          }
+        ],
+        "id": "measure_voc_changed"
+      }
+    ],
+    "conditions": [
+      {
+        "title": {
+          "en": "The humidity alarm is !{{on|off}}"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=cloud_view_series|cloud_wave_series&capabilities=alarm_humidity"
+          }
+        ],
+        "id": "alarm_humidity"
+      },
+      {
+        "title": {
+          "en": "The mold risk alarm is !{{on|off}}"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=cloud_view_series|cloud_wave_series&capabilities=alarm_mold_risk"
+          }
+        ],
+        "id": "alarm_mold_risk"
+      },
+      {
+        "title": {
+          "en": "The PM1 alarm is !{{on|off}}"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=cloud_view_series|cloud_wave_series&capabilities=alarm_pm1"
+          }
+        ],
+        "id": "alarm_pm1"
+      },
+      {
+        "title": {
+          "en": "The radon alarm (Bq/m³) is !{{on|off}}"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=cloud_view_series|cloud_wave_series&capabilities=alarm_radon"
+          }
+        ],
+        "id": "alarm_radon"
+      },
+      {
+        "title": {
+          "en": "The radon alarm (pCi/L) is !{{on|off}}"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=cloud_view_series|cloud_wave_series&capabilities=alarm_radon_us"
+          }
+        ],
+        "id": "alarm_radon_us"
+      },
+      {
+        "title": {
+          "en": "The temperature alarm is !{{on|off}}"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=cloud_view_series|cloud_wave_series&capabilities=alarm_temperature"
+          }
+        ],
+        "id": "alarm_temperature"
+      },
+      {
+        "title": {
+          "en": "The VOC alarm is !{{on|off}}"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=cloud_view_series|cloud_wave_series&capabilities=alarm_voc"
+          }
+        ],
+        "id": "alarm_voc"
+      }
+    ]
+  },
+  "drivers": [
+    {
+      "platforms": [
+        "local",
+        "cloud"
+      ],
+      "connectivity": [
+        "cloud"
+      ],
+      "images": {
+        "xlarge": "/drivers/cloud_view_series/assets/images/xlarge.png",
+        "large": "/drivers/cloud_view_series/assets/images/large.png",
+        "small": "/drivers/cloud_view_series/assets/images/small.png"
+      },
+      "icon": "/drivers/cloud_view_series/assets/icon.svg",
+      "class": "sensor",
+      "energy": {
+        "batteries": [
+          "OTHER"
+        ]
+      },
+      "pair": [
+        {
+          "id": "login_oauth2",
+          "template": "login_oauth2"
+        },
+        {
+          "id": "list_devices",
+          "template": "list_devices",
+          "navigation": {
+            "next": "add_devices"
+          }
+        },
+        {
+          "id": "add_devices",
+          "template": "add_devices"
+        }
+      ],
+      "repair": [
+        {
+          "id": "login_oauth2",
+          "template": "login_oauth2"
+        }
+      ],
+      "name": {
+        "en": "View Series"
+      },
+      "capabilities": [
+        "measure_radon_display",
+        "alarm_radon_display",
+        "measure_radon",
+        "alarm_radon",
+        "measure_radon_us",
+        "alarm_radon_us",
+        "measure_co2",
+        "alarm_co2",
+        "measure_voc",
+        "alarm_voc",
+        "measure_pm25",
+        "alarm_pm25",
+        "measure_pm1",
+        "alarm_pm1",
+        "measure_humidity",
+        "alarm_humidity",
+        "measure_temperature",
+        "alarm_temperature",
+        "measure_pressure",
+        "measure_battery"
+      ],
+      "id": "cloud_view_series",
+      "settings": [
+        {
+          "type": "group",
+          "label": {
+            "en": "Radon"
+          },
+          "children": [
+            {
+              "id": "radon_available",
+              "type": "label",
+              "label": {
+                "en": "Sensor alarm available"
+              },
+              "hint": {
+                "en": "Indicates whether this sensor alarm is available for your device."
+              },
+              "value": "No"
+            },
+            {
+              "id": "radon_units",
+              "type": "dropdown",
+              "label": {
+                "en": "Display units"
+              },
+              "value": "metric",
+              "values": [
+                {
+                  "id": "metric",
+                  "label": {
+                    "en": "Bq/m³"
+                  }
+                },
+                {
+                  "id": "imperial",
+                  "label": {
+                    "en": "pCi/L"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "radon_threshold",
+              "type": "number",
+              "label": {
+                "en": "Alarm threshold"
+              },
+              "hint": {
+                "en": "< 100 is great, 100 - 150 is okay and >= 150 is bad."
+              },
+              "value": 150,
+              "min": 1,
+              "step": 1,
+              "units": {
+                "en": "Bq/m³"
+              }
+            },
+            {
+              "id": "radon_us_threshold",
+              "type": "number",
+              "label": {
+                "en": "Alarm threshold"
+              },
+              "hint": {
+                "en": "< 2.5 is great, 2.5 - 4 is okay and >= 4 is bad."
+              },
+              "value": 4,
+              "min": 0.1,
+              "step": 0.1,
+              "units": {
+                "en": "pCi/L"
+              }
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "label": {
+            "en": "CO2"
+          },
+          "children": [
+            {
+              "id": "co2_available",
+              "type": "label",
+              "label": {
+                "en": "Sensor alarm available"
+              },
+              "hint": {
+                "en": "Indicates whether this sensor alarm is available for your device."
+              },
+              "value": "No"
+            },
+            {
+              "id": "co2_threshold",
+              "type": "number",
+              "label": {
+                "en": "Alarm threshold"
+              },
+              "hint": {
+                "en": "< 800 is great, 180 - 1000 is okay and >= 1000 is bad."
+              },
+              "value": 1000,
+              "min": 1,
+              "units": {
+                "en": "ppm"
+              }
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "label": {
+            "en": "VOC"
+          },
+          "children": [
+            {
+              "id": "voc_available",
+              "type": "label",
+              "label": {
+                "en": "Sensor alarm available"
+              },
+              "hint": {
+                "en": "Indicates whether this sensor alarm is available for your device."
+              },
+              "value": "No"
+            },
+            {
+              "id": "voc_threshold",
+              "type": "number",
+              "label": {
+                "en": "Alarm threshold"
+              },
+              "hint": {
+                "en": "< 250 is great, 250 - 2000 is okay and >= 2000 is bad."
+              },
+              "value": 2000,
+              "min": 1,
+              "units": {
+                "en": "ppb"
+              }
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "label": {
+            "en": "PM2.5"
+          },
+          "children": [
+            {
+              "id": "pm25_available",
+              "type": "label",
+              "label": {
+                "en": "Sensor alarm available"
+              },
+              "hint": {
+                "en": "Indicates whether this sensor alarm is available for your device."
+              },
+              "value": "No"
+            },
+            {
+              "id": "pm25_threshold",
+              "type": "number",
+              "label": {
+                "en": "Alarm threshold"
+              },
+              "hint": {
+                "en": "< 10 is great, 10 - 35 is okay and >= 35 is bad."
+              },
+              "value": 35,
+              "min": 1,
+              "units": {
+                "en": "μg/m³"
+              }
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "label": {
+            "en": "PM1"
+          },
+          "children": [
+            {
+              "id": "pm1_available",
+              "type": "label",
+              "label": {
+                "en": "Sensor alarm available"
+              },
+              "hint": {
+                "en": "Indicates whether this sensor alarm is available for your device."
+              },
+              "value": "No"
+            },
+            {
+              "id": "pm1_threshold",
+              "type": "number",
+              "label": {
+                "en": "Alarm threshold"
+              },
+              "hint": {
+                "en": "< 10 is great, 10 - 35 is okay and >= 35 is bad."
+              },
+              "value": 35,
+              "min": 1,
+              "units": {
+                "en": "μg/m³"
+              }
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "label": {
+            "en": "Humidity"
+          },
+          "children": [
+            {
+              "id": "humidity_available",
+              "type": "label",
+              "label": {
+                "en": "Sensor alarm available"
+              },
+              "hint": {
+                "en": "Indicates whether this sensor alarm is available for your device."
+              },
+              "value": "No"
+            },
+            {
+              "id": "humidity_high_threshold",
+              "type": "number",
+              "label": {
+                "en": "High alarm threshold"
+              },
+              "hint": {
+                "en": "< 60 is great, 60 - 70 is okay and >= 70 is bad."
+              },
+              "value": 70,
+              "min": 50,
+              "max": 100,
+              "units": {
+                "en": "%"
+              }
+            },
+            {
+              "id": "humidity_low_threshold",
+              "type": "number",
+              "label": {
+                "en": "Low alarm threshold"
+              },
+              "hint": {
+                "en": "< 25 is bad, 25 - 30 is okay and >= 30 is great."
+              },
+              "value": 25,
+              "min": 0,
+              "max": 50,
+              "units": {
+                "en": "%"
+              }
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "label": {
+            "en": "Temperature"
+          },
+          "children": [
+            {
+              "id": "temperature_available",
+              "type": "label",
+              "label": {
+                "en": "Sensor alarm available"
+              },
+              "hint": {
+                "en": "Indicates whether this sensor alarm is available for your device."
+              },
+              "value": "No"
+            },
+            {
+              "id": "temperature_high_threshold",
+              "type": "number",
+              "label": {
+                "en": "High alarm threshold"
+              },
+              "hint": {
+                "en": "< 18 is cold, 18 - 25 is okay and >= 25 is hot."
+              },
+              "value": 25,
+              "units": {
+                "en": "°C"
+              }
+            },
+            {
+              "id": "temperature_low_threshold",
+              "type": "number",
+              "label": {
+                "en": "High alarm threshold"
+              },
+              "hint": {
+                "en": "< 18 is cold, 18 - 25 is okay and >= 25 is hot."
+              },
+              "value": 18,
+              "units": {
+                "en": "°C"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "platforms": [
+        "local",
+        "cloud"
+      ],
+      "connectivity": [
+        "cloud"
+      ],
+      "images": {
+        "xlarge": "/drivers/cloud_wave_series/assets/images/xlarge.png",
+        "large": "/drivers/cloud_wave_series/assets/images/large.png",
+        "small": "/drivers/cloud_wave_series/assets/images/small.png"
+      },
+      "icon": "/drivers/cloud_wave_series/assets/icon.svg",
+      "class": "sensor",
+      "energy": {
+        "batteries": [
+          "OTHER"
+        ]
+      },
+      "pair": [
+        {
+          "id": "login_oauth2",
+          "template": "login_oauth2"
+        },
+        {
+          "id": "list_devices",
+          "template": "list_devices",
+          "navigation": {
+            "next": "add_devices"
+          }
+        },
+        {
+          "id": "add_devices",
+          "template": "add_devices"
+        }
+      ],
+      "repair": [
+        {
+          "id": "login_oauth2",
+          "template": "login_oauth2"
+        }
+      ],
+      "name": {
+        "en": "Wave Series"
+      },
+      "capabilities": [
+        "measure_mold_risk",
+        "alarm_mold_risk",
+        "measure_radon_display",
+        "alarm_radon_display",
+        "measure_radon",
+        "alarm_radon",
+        "measure_radon_us",
+        "alarm_radon_us",
+        "measure_co2",
+        "alarm_co2",
+        "measure_voc",
+        "alarm_voc",
+        "measure_humidity",
+        "alarm_humidity",
+        "measure_temperature",
+        "alarm_temperature",
+        "measure_pressure",
+        "measure_battery"
+      ],
+      "id": "cloud_wave_series",
+      "settings": [
+        {
+          "type": "group",
+          "label": {
+            "en": "Mold risk"
+          },
+          "children": [
+            {
+              "id": "mold_risk_available",
+              "type": "label",
+              "label": {
+                "en": "Sensor alarm available"
+              },
+              "hint": {
+                "en": "Indicates whether this sensor alarm is available for your device."
+              },
+              "value": "No"
+            },
+            {
+              "id": "mold_risk_threshold",
+              "type": "number",
+              "label": {
+                "en": "Alarm threshold"
+              },
+              "hint": {
+                "en": "< 3 is great, 3 - 6 is okay and >= 6 is bad."
+              },
+              "value": 6,
+              "min": 0,
+              "max": 10
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "label": {
+            "en": "Radon"
+          },
+          "children": [
+            {
+              "id": "radon_available",
+              "type": "label",
+              "label": {
+                "en": "Sensor alarm available"
+              },
+              "hint": {
+                "en": "Indicates whether this sensor alarm is available for your device."
+              },
+              "value": "No"
+            },
+            {
+              "id": "radon_units",
+              "type": "dropdown",
+              "label": {
+                "en": "Display units"
+              },
+              "value": "metric",
+              "values": [
+                {
+                  "id": "metric",
+                  "label": {
+                    "en": "Bq/m³"
+                  }
+                },
+                {
+                  "id": "imperial",
+                  "label": {
+                    "en": "pCi/L"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "radon_threshold",
+              "type": "number",
+              "label": {
+                "en": "Alarm threshold"
+              },
+              "hint": {
+                "en": "< 100 is great, 100 - 150 is okay and >= 150 is bad."
+              },
+              "value": 150,
+              "min": 1,
+              "step": 1,
+              "units": {
+                "en": "Bq/m³"
+              }
+            },
+            {
+              "id": "radon_us_threshold",
+              "type": "number",
+              "label": {
+                "en": "Alarm threshold"
+              },
+              "hint": {
+                "en": "< 2.5 is great, 2.5 - 4 is okay and >= 4 is bad."
+              },
+              "value": 4,
+              "min": 0.1,
+              "step": 0.1,
+              "units": {
+                "en": "pCi/L"
+              }
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "label": {
+            "en": "CO2"
+          },
+          "children": [
+            {
+              "id": "co2_available",
+              "type": "label",
+              "label": {
+                "en": "Sensor alarm available"
+              },
+              "hint": {
+                "en": "Indicates whether this sensor alarm is available for your device."
+              },
+              "value": "No"
+            },
+            {
+              "id": "co2_threshold",
+              "type": "number",
+              "label": {
+                "en": "Alarm threshold"
+              },
+              "hint": {
+                "en": "< 800 is great, 180 - 1000 is okay and >= 1000 is bad."
+              },
+              "value": 1000,
+              "min": 1,
+              "units": {
+                "en": "ppm"
+              }
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "label": {
+            "en": "VOC"
+          },
+          "children": [
+            {
+              "id": "voc_available",
+              "type": "label",
+              "label": {
+                "en": "Sensor alarm available"
+              },
+              "hint": {
+                "en": "Indicates whether this sensor alarm is available for your device."
+              },
+              "value": "No"
+            },
+            {
+              "id": "voc_threshold",
+              "type": "number",
+              "label": {
+                "en": "Alarm threshold"
+              },
+              "hint": {
+                "en": "< 250 is great, 250 - 2000 is okay and >= 2000 is bad."
+              },
+              "value": 2000,
+              "min": 1,
+              "units": {
+                "en": "ppb"
+              }
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "label": {
+            "en": "Humidity"
+          },
+          "children": [
+            {
+              "id": "humidity_available",
+              "type": "label",
+              "label": {
+                "en": "Sensor alarm available"
+              },
+              "hint": {
+                "en": "Indicates whether this sensor alarm is available for your device."
+              },
+              "value": "No"
+            },
+            {
+              "id": "humidity_high_threshold",
+              "type": "number",
+              "label": {
+                "en": "High alarm threshold"
+              },
+              "hint": {
+                "en": "< 60 is great, 60 - 70 is okay and >= 70 is bad."
+              },
+              "value": 70,
+              "min": 50,
+              "max": 100,
+              "units": {
+                "en": "%"
+              }
+            },
+            {
+              "id": "humidity_low_threshold",
+              "type": "number",
+              "label": {
+                "en": "Low alarm threshold"
+              },
+              "hint": {
+                "en": "< 25 is bad, 25 - 30 is okay and >= 30 is great."
+              },
+              "value": 25,
+              "min": 0,
+              "max": 50,
+              "units": {
+                "en": "%"
+              }
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "label": {
+            "en": "Temperature"
+          },
+          "children": [
+            {
+              "id": "temperature_available",
+              "type": "label",
+              "label": {
+                "en": "Sensor alarm available"
+              },
+              "hint": {
+                "en": "Indicates whether this sensor alarm is available for your device."
+              },
+              "value": "No"
+            },
+            {
+              "id": "temperature_high_threshold",
+              "type": "number",
+              "label": {
+                "en": "High alarm threshold"
+              },
+              "hint": {
+                "en": "< 18 is cold, 18 - 25 is okay and >= 25 is hot."
+              },
+              "value": 25,
+              "units": {
+                "en": "°C"
+              }
+            },
+            {
+              "id": "temperature_low_threshold",
+              "type": "number",
+              "label": {
+                "en": "High alarm threshold"
+              },
+              "hint": {
+                "en": "< 18 is cold, 18 - 25 is okay and >= 25 is hot."
+              },
+              "value": 18,
+              "units": {
+                "en": "°C"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "capabilities": {
+    "alarm_humidity": {
+      "type": "boolean",
+      "title": {
+        "en": "Humidity alarm"
+      },
+      "getable": true,
+      "setable": false,
+      "uiComponent": "sensor",
+      "icon": "/assets/icons/humidity.svg",
+      "insights": true,
+      "insightsTitleTrue": {
+        "en": "Humidity alarm triggered"
+      },
+      "insightsTitleFalse": {
+        "en": "Humidity alarm cleared"
+      }
+    },
+    "alarm_mold_risk": {
+      "type": "boolean",
+      "title": {
+        "en": "Mold risk alarm"
+      },
+      "getable": true,
+      "setable": false,
+      "uiComponent": "sensor",
+      "icon": "/assets/icons/mold_risk.svg",
+      "insights": true,
+      "insightsTitleTrue": {
+        "en": "Mold risk alarm triggered"
+      },
+      "insightsTitleFalse": {
+        "en": "Mold risk alarm cleared"
+      }
+    },
+    "alarm_pm1": {
+      "type": "boolean",
+      "title": {
+        "en": "PM1 alarm"
+      },
+      "getable": true,
+      "setable": false,
+      "uiComponent": "sensor",
+      "icon": "/assets/icons/pm.svg",
+      "insights": true,
+      "insightsTitleTrue": {
+        "en": "PM1 alarm triggered"
+      },
+      "insightsTitleFalse": {
+        "en": "PM1 alarm cleared"
+      }
+    },
+    "alarm_radon": {
+      "type": "boolean",
+      "title": {
+        "en": "Radon alarm (Bq/m³)"
+      },
+      "getable": true,
+      "setable": false,
+      "uiComponent": null,
+      "icon": "/assets/icons/radon.svg",
+      "insights": false
+    },
+    "alarm_radon_display": {
+      "type": "boolean",
+      "title": {
+        "en": "Radon alarm"
+      },
+      "getable": true,
+      "setable": false,
+      "uiComponent": "sensor",
+      "icon": "/assets/icons/radon.svg",
+      "insights": true,
+      "insightsTitleTrue": {
+        "en": "Radon alarm triggered"
+      },
+      "insightsTitleFalse": {
+        "en": "Radon alarm cleared"
+      }
+    },
+    "alarm_radon_us": {
+      "type": "boolean",
+      "title": {
+        "en": "Radon alarm (pCi/L)"
+      },
+      "getable": true,
+      "setable": false,
+      "uiComponent": null,
+      "icon": "/assets/icons/radon.svg",
+      "insights": false
+    },
+    "alarm_temperature": {
+      "type": "boolean",
+      "title": {
+        "en": "Temperature alarm"
+      },
+      "getable": true,
+      "setable": false,
+      "uiComponent": "sensor",
+      "icon": "/assets/icons/temp.svg",
+      "insights": true,
+      "insightsTitleTrue": {
+        "en": "Temperature alarm triggered"
+      },
+      "insightsTitleFalse": {
+        "en": "Temperature alarm cleared"
+      }
+    },
+    "alarm_voc": {
+      "type": "boolean",
+      "title": {
+        "en": "VOC alarm"
+      },
+      "getable": true,
+      "setable": false,
+      "uiComponent": "sensor",
+      "icon": "/assets/icons/voc.svg",
+      "insights": true,
+      "insightsTitleTrue": {
+        "en": "VOC alarm triggered"
+      },
+      "insightsTitleFalse": {
+        "en": "VOC alarm cleared"
+      }
+    },
+    "measure_mold_risk": {
+      "type": "number",
+      "title": {
+        "en": "Mold risk"
+      },
+      "desc": {
+        "en": "Mold risk (0 - 10)"
+      },
+      "insights": true,
+      "chartType": "spline",
+      "getable": true,
+      "setable": false,
+      "uiComponent": "sensor",
+      "icon": "/assets/icons/mold_risk.svg"
+    },
+    "measure_pm1": {
+      "type": "number",
+      "title": {
+        "en": "PM1",
+        "nl": "PM1",
+        "de": "PM1",
+        "fr": "PM1",
+        "it": "PM1",
+        "sv": "PM1",
+        "no": "PM1",
+        "es": "PM1",
+        "ru": "ТЧ 1",
+        "pl": "PM1"
+      },
+      "units": {
+        "en": "μg/m³",
+        "ru": "мкг/м³"
+      },
+      "insights": true,
+      "desc": {
+        "en": "Atmospheric particulate matter (μg/m³)",
+        "nl": "Deeltjesvormige luchtverontreiniging (μg/m³)",
+        "de": "Atmosphärischer Feinstaub (μg/m³)",
+        "fr": "Particules en suspension (μg/m³)",
+        "it": "Particolato atmosferico (μg/m³)",
+        "sv": "Atmosfäriskt partikelämne (μg/m³)",
+        "no": "Atmosfæriske partikler (μg/m³)",
+        "es": "Partículas atmosféricas (μg/m³)",
+        "da": "Atmosfæriske partikler (μg/m³)",
+        "ru": "Атмосферные твердые частицы (мкг/м³)",
+        "pl": "Pył zawieszony (μg/m³)"
+      },
+      "chartType": "spline",
+      "decimals": 2,
+      "getable": true,
+      "setable": false,
+      "uiComponent": "sensor",
+      "icon": "/assets/icons/pm.svg"
+    },
+    "measure_radon": {
+      "type": "number",
+      "title": {
+        "en": "Radon"
+      },
+      "units": {
+        "en": "Bq/m³"
+      },
+      "insights": true,
+      "desc": {
+        "en": "Radon level (Bq/m³)"
+      },
+      "chartType": "spline",
+      "decimals": 2,
+      "getable": true,
+      "setable": false,
+      "uiComponent": null,
+      "icon": "/assets/icons/radon.svg"
+    },
+    "measure_radon_display": {
+      "type": "string",
+      "title": {
+        "en": "Radon"
+      },
+      "insights": false,
+      "desc": {
+        "en": "Radon level"
+      },
+      "getable": true,
+      "setable": false,
+      "uiComponent": "sensor",
+      "icon": "/assets/icons/radon.svg",
+      "preventTag": true,
+      "preventInsights": true
+    },
+    "measure_radon_us": {
+      "type": "number",
+      "title": {
+        "en": "Radon"
+      },
+      "units": {
+        "en": "pCi/L"
+      },
+      "insights": true,
+      "desc": {
+        "en": "Radon level (pCi/L)"
+      },
+      "chartType": "spline",
+      "decimals": 2,
+      "getable": true,
+      "setable": false,
+      "uiComponent": null,
+      "icon": "/assets/icons/radon.svg"
+    },
+    "measure_voc": {
+      "type": "number",
+      "title": {
+        "en": "VOC"
+      },
+      "units": {
+        "en": "ppb"
+      },
+      "insights": true,
+      "desc": {
+        "en": "Volatile organic compound concentration (ppb)"
+      },
+      "chartType": "spline",
+      "decimals": 2,
+      "getable": true,
+      "setable": false,
+      "uiComponent": "sensor",
+      "icon": "/assets/icons/voc.svg"
+    }
+  }
+}
