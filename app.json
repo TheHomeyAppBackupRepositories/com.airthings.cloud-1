@@ -1,7 +1,7 @@
 {
   "_comment": "This file is generated. Please edit .homeycompose/app.json instead.",
   "id": "com.airthings.cloud",
-  "version": "1.2.1",
+  "version": "2.0.4",
   "compatibility": ">=7.4.0",
   "platforms": [
     "local",
@@ -19,7 +19,9 @@
     "appliances",
     "climate"
   ],
-  "permissions": [],
+  "permissions": [
+    "homey:wireless:ble"
+  ],
   "images": {
     "small": "/assets/images/small.png",
     "large": "/assets/images/large.png",
@@ -47,7 +49,7 @@
           {
             "name": "device",
             "type": "device",
-            "filter": "driver_id=cloud_view_series|cloud_wave_series&capabilities=alarm_humidity"
+            "filter": "driver_id=cloud_view_series|cloud_wave_series|bluetooth_wave_plus|bluetooth_wave_mini|bluetooth_wave2&capabilities=alarm_humidity"
           }
         ],
         "id": "alarm_humidity_false"
@@ -60,7 +62,7 @@
           {
             "name": "device",
             "type": "device",
-            "filter": "driver_id=cloud_view_series|cloud_wave_series&capabilities=alarm_humidity"
+            "filter": "driver_id=cloud_view_series|cloud_wave_series|bluetooth_wave_plus|bluetooth_wave_mini|bluetooth_wave2&capabilities=alarm_humidity"
           }
         ],
         "id": "alarm_humidity_true"
@@ -125,7 +127,7 @@
           {
             "name": "device",
             "type": "device",
-            "filter": "driver_id=cloud_view_series|cloud_wave_series&capabilities=alarm_radon_display"
+            "filter": "driver_id=cloud_view_series|cloud_wave_series|bluetooth_wave_plus|bluetooth_wave2&capabilities=alarm_radon_display"
           }
         ],
         "id": "alarm_radon_display_false"
@@ -138,7 +140,7 @@
           {
             "name": "device",
             "type": "device",
-            "filter": "driver_id=cloud_view_series|cloud_wave_series&capabilities=alarm_radon_display"
+            "filter": "driver_id=cloud_view_series|cloud_wave_series|bluetooth_wave_plus|bluetooth_wave2&capabilities=alarm_radon_display"
           }
         ],
         "id": "alarm_radon_display_true"
@@ -207,7 +209,7 @@
           {
             "name": "device",
             "type": "device",
-            "filter": "driver_id=cloud_view_series|cloud_wave_series&capabilities=alarm_temperature"
+            "filter": "driver_id=cloud_view_series|cloud_wave_series|bluetooth_wave_plus|bluetooth_wave_mini|bluetooth_wave2&capabilities=alarm_temperature"
           }
         ],
         "id": "alarm_temperature_false"
@@ -220,7 +222,7 @@
           {
             "name": "device",
             "type": "device",
-            "filter": "driver_id=cloud_view_series|cloud_wave_series&capabilities=alarm_temperature"
+            "filter": "driver_id=cloud_view_series|cloud_wave_series|bluetooth_wave_plus|bluetooth_wave_mini|bluetooth_wave2&capabilities=alarm_temperature"
           }
         ],
         "id": "alarm_temperature_true"
@@ -233,7 +235,7 @@
           {
             "name": "device",
             "type": "device",
-            "filter": "driver_id=cloud_view_series|cloud_wave_series&capabilities=alarm_voc"
+            "filter": "driver_id=cloud_view_series|cloud_wave_series|bluetooth_wave_plus|bluetooth_wave_mini&capabilities=alarm_voc"
           }
         ],
         "id": "alarm_voc_false"
@@ -246,7 +248,7 @@
           {
             "name": "device",
             "type": "device",
-            "filter": "driver_id=cloud_view_series|cloud_wave_series&capabilities=alarm_voc"
+            "filter": "driver_id=cloud_view_series|cloud_wave_series|bluetooth_wave_plus|bluetooth_wave_mini&capabilities=alarm_voc"
           }
         ],
         "id": "alarm_voc_true"
@@ -355,7 +357,7 @@
           {
             "name": "device",
             "type": "device",
-            "filter": "driver_id=cloud_view_series|cloud_wave_series&capabilities=measure_radon"
+            "filter": "driver_id=cloud_view_series|cloud_wave_series|bluetooth_wave_plus|bluetooth_wave2&capabilities=measure_radon"
           }
         ],
         "id": "measure_radon_changed"
@@ -372,7 +374,7 @@
           {
             "name": "device",
             "type": "device",
-            "filter": "driver_id=cloud_view_series|cloud_wave_series&capabilities=measure_radon_display"
+            "filter": "driver_id=cloud_view_series|cloud_wave_series|bluetooth_wave_plus|bluetooth_wave2&capabilities=measure_radon_display"
           }
         ],
         "id": "measure_radon_display_changed"
@@ -398,7 +400,7 @@
           {
             "name": "device",
             "type": "device",
-            "filter": "driver_id=cloud_view_series|cloud_wave_series&capabilities=measure_radon_us"
+            "filter": "driver_id=cloud_view_series|cloud_wave_series|bluetooth_wave_plus|bluetooth_wave2&capabilities=measure_radon_us"
           }
         ],
         "id": "measure_radon_us_changed"
@@ -425,7 +427,7 @@
           {
             "name": "device",
             "type": "device",
-            "filter": "driver_id=cloud_view_series|cloud_wave_series&capabilities=measure_voc"
+            "filter": "driver_id=cloud_view_series|cloud_wave_series|bluetooth_wave_plus|bluetooth_wave_mini&capabilities=measure_voc"
           }
         ],
         "id": "measure_voc_changed"
@@ -440,7 +442,7 @@
           {
             "name": "device",
             "type": "device",
-            "filter": "driver_id=cloud_view_series|cloud_wave_series&capabilities=alarm_humidity"
+            "filter": "driver_id=cloud_view_series|cloud_wave_series|bluetooth_wave_plus|bluetooth_wave_mini|bluetooth_wave2&capabilities=alarm_humidity"
           }
         ],
         "id": "alarm_humidity"
@@ -479,7 +481,7 @@
           {
             "name": "device",
             "type": "device",
-            "filter": "driver_id=cloud_view_series|cloud_wave_series&capabilities=alarm_radon"
+            "filter": "driver_id=cloud_view_series|cloud_wave_series|bluetooth_wave_plus|bluetooth_wave2&capabilities=alarm_radon"
           }
         ],
         "id": "alarm_radon"
@@ -492,7 +494,7 @@
           {
             "name": "device",
             "type": "device",
-            "filter": "driver_id=cloud_view_series|cloud_wave_series&capabilities=alarm_radon_us"
+            "filter": "driver_id=cloud_view_series|cloud_wave_series|bluetooth_wave_plus|bluetooth_wave2&capabilities=alarm_radon_us"
           }
         ],
         "id": "alarm_radon_us"
@@ -505,7 +507,7 @@
           {
             "name": "device",
             "type": "device",
-            "filter": "driver_id=cloud_view_series|cloud_wave_series&capabilities=alarm_temperature"
+            "filter": "driver_id=cloud_view_series|cloud_wave_series|bluetooth_wave_plus|bluetooth_wave_mini|bluetooth_wave2&capabilities=alarm_temperature"
           }
         ],
         "id": "alarm_temperature"
@@ -518,7 +520,7 @@
           {
             "name": "device",
             "type": "device",
-            "filter": "driver_id=cloud_view_series|cloud_wave_series&capabilities=alarm_voc"
+            "filter": "driver_id=cloud_view_series|cloud_wave_series|bluetooth_wave_plus|bluetooth_wave_mini&capabilities=alarm_voc"
           }
         ],
         "id": "alarm_voc"
@@ -526,6 +528,592 @@
     ]
   },
   "drivers": [
+    {
+      "platforms": [
+        "local",
+        "cloud"
+      ],
+      "connectivity": [
+        "ble"
+      ],
+      "images": {
+        "xlarge": "/drivers/bluetooth_wave2/assets/images/xlarge.png",
+        "large": "/drivers/bluetooth_wave2/assets/images/large.png",
+        "small": "/drivers/bluetooth_wave2/assets/images/small.png"
+      },
+      "icon": "/drivers/bluetooth_wave2/assets/icon.svg",
+      "class": "sensor",
+      "pair": [
+        {
+          "id": "list_devices",
+          "template": "list_devices",
+          "navigation": {
+            "next": "add_devices"
+          }
+        },
+        {
+          "id": "add_devices",
+          "template": "add_devices"
+        }
+      ],
+      "name": {
+        "en": "Wave Radon (Bluetooth)"
+      },
+      "capabilities": [
+        "measure_radon_display",
+        "alarm_radon_display",
+        "measure_radon",
+        "alarm_radon",
+        "measure_radon_us",
+        "alarm_radon_us",
+        "measure_humidity",
+        "alarm_humidity",
+        "measure_temperature",
+        "alarm_temperature",
+        "measure_luminance"
+      ],
+      "energy": {
+        "batteries": [
+          "AA",
+          "AA"
+        ]
+      },
+      "id": "bluetooth_wave2",
+      "settings": [
+        {
+          "type": "group",
+          "label": {
+            "en": "Radon"
+          },
+          "children": [
+            {
+              "id": "radon_units",
+              "type": "dropdown",
+              "label": {
+                "en": "Display units"
+              },
+              "value": "metric",
+              "values": [
+                {
+                  "id": "metric",
+                  "label": {
+                    "en": "Bq/m³"
+                  }
+                },
+                {
+                  "id": "imperial",
+                  "label": {
+                    "en": "pCi/L"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "radon_threshold",
+              "type": "number",
+              "label": {
+                "en": "Alarm threshold"
+              },
+              "hint": {
+                "en": "< 100 is great, 100 - 150 is okay and >= 150 is bad."
+              },
+              "value": 150,
+              "min": 1,
+              "step": 1,
+              "units": {
+                "en": "Bq/m³"
+              }
+            },
+            {
+              "id": "radon_us_threshold",
+              "type": "number",
+              "label": {
+                "en": "Alarm threshold"
+              },
+              "hint": {
+                "en": "< 2.5 is great, 2.5 - 4 is okay and >= 4 is bad."
+              },
+              "value": 4,
+              "min": 0.1,
+              "step": 0.1,
+              "units": {
+                "en": "pCi/L"
+              }
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "label": {
+            "en": "Humidity"
+          },
+          "children": [
+            {
+              "id": "humidity_high_threshold",
+              "type": "number",
+              "label": {
+                "en": "High alarm threshold"
+              },
+              "hint": {
+                "en": "< 60 is great, 60 - 70 is okay and >= 70 is bad."
+              },
+              "value": 70,
+              "min": 50,
+              "max": 100,
+              "units": {
+                "en": "%"
+              }
+            },
+            {
+              "id": "humidity_low_threshold",
+              "type": "number",
+              "label": {
+                "en": "Low alarm threshold"
+              },
+              "hint": {
+                "en": "< 25 is bad, 25 - 30 is okay and >= 30 is great."
+              },
+              "value": 25,
+              "min": 0,
+              "max": 50,
+              "units": {
+                "en": "%"
+              }
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "label": {
+            "en": "Temperature"
+          },
+          "children": [
+            {
+              "id": "temperature_high_threshold",
+              "type": "number",
+              "label": {
+                "en": "High alarm threshold"
+              },
+              "hint": {
+                "en": "< 18 is cold, 18 - 25 is okay and >= 25 is hot."
+              },
+              "value": 25,
+              "units": {
+                "en": "°C"
+              }
+            },
+            {
+              "id": "temperature_low_threshold",
+              "type": "number",
+              "label": {
+                "en": "Low alarm threshold"
+              },
+              "hint": {
+                "en": "< 18 is cold, 18 - 25 is okay and >= 25 is hot."
+              },
+              "value": 18,
+              "units": {
+                "en": "°C"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "platforms": [
+        "local",
+        "cloud"
+      ],
+      "connectivity": [
+        "ble"
+      ],
+      "images": {
+        "xlarge": "/drivers/bluetooth_wave_mini/assets/images/xlarge.png",
+        "large": "/drivers/bluetooth_wave_mini/assets/images/large.png",
+        "small": "/drivers/bluetooth_wave_mini/assets/images/small.png"
+      },
+      "icon": "/drivers/bluetooth_wave_mini/assets/icon.svg",
+      "class": "sensor",
+      "pair": [
+        {
+          "id": "list_devices",
+          "template": "list_devices",
+          "navigation": {
+            "next": "add_devices"
+          }
+        },
+        {
+          "id": "add_devices",
+          "template": "add_devices"
+        }
+      ],
+      "name": {
+        "en": "Wave Mini (Bluetooth)"
+      },
+      "capabilities": [
+        "measure_voc",
+        "alarm_voc",
+        "measure_humidity",
+        "alarm_humidity",
+        "measure_temperature",
+        "alarm_temperature",
+        "measure_pressure",
+        "measure_luminance"
+      ],
+      "energy": {
+        "batteries": [
+          "AA",
+          "AA",
+          "AA"
+        ]
+      },
+      "id": "bluetooth_wave_mini",
+      "settings": [
+        {
+          "type": "group",
+          "label": {
+            "en": "VOC"
+          },
+          "children": [
+            {
+              "id": "voc_threshold",
+              "type": "number",
+              "label": {
+                "en": "Alarm threshold"
+              },
+              "hint": {
+                "en": "< 250 is great, 250 - 2000 is okay and >= 2000 is bad."
+              },
+              "value": 2000,
+              "min": 1,
+              "units": {
+                "en": "ppb"
+              }
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "label": {
+            "en": "Humidity"
+          },
+          "children": [
+            {
+              "id": "humidity_high_threshold",
+              "type": "number",
+              "label": {
+                "en": "High alarm threshold"
+              },
+              "hint": {
+                "en": "< 60 is great, 60 - 70 is okay and >= 70 is bad."
+              },
+              "value": 70,
+              "min": 50,
+              "max": 100,
+              "units": {
+                "en": "%"
+              }
+            },
+            {
+              "id": "humidity_low_threshold",
+              "type": "number",
+              "label": {
+                "en": "Low alarm threshold"
+              },
+              "hint": {
+                "en": "< 25 is bad, 25 - 30 is okay and >= 30 is great."
+              },
+              "value": 25,
+              "min": 0,
+              "max": 50,
+              "units": {
+                "en": "%"
+              }
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "label": {
+            "en": "Temperature"
+          },
+          "children": [
+            {
+              "id": "temperature_high_threshold",
+              "type": "number",
+              "label": {
+                "en": "High alarm threshold"
+              },
+              "hint": {
+                "en": "< 18 is cold, 18 - 25 is okay and >= 25 is hot."
+              },
+              "value": 25,
+              "units": {
+                "en": "°C"
+              }
+            },
+            {
+              "id": "temperature_low_threshold",
+              "type": "number",
+              "label": {
+                "en": "Low alarm threshold"
+              },
+              "hint": {
+                "en": "< 18 is cold, 18 - 25 is okay and >= 25 is hot."
+              },
+              "value": 18,
+              "units": {
+                "en": "°C"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "platforms": [
+        "local",
+        "cloud"
+      ],
+      "connectivity": [
+        "ble"
+      ],
+      "images": {
+        "xlarge": "/drivers/bluetooth_wave_plus/assets/images/xlarge.png",
+        "large": "/drivers/bluetooth_wave_plus/assets/images/large.png",
+        "small": "/drivers/bluetooth_wave_plus/assets/images/small.png"
+      },
+      "icon": "/drivers/bluetooth_wave_plus/assets/icon.svg",
+      "class": "sensor",
+      "pair": [
+        {
+          "id": "list_devices",
+          "template": "list_devices",
+          "navigation": {
+            "next": "add_devices"
+          }
+        },
+        {
+          "id": "add_devices",
+          "template": "add_devices"
+        }
+      ],
+      "name": {
+        "en": "Wave Plus (Bluetooth)"
+      },
+      "capabilities": [
+        "measure_radon_display",
+        "alarm_radon_display",
+        "measure_radon",
+        "alarm_radon",
+        "measure_radon_us",
+        "alarm_radon_us",
+        "measure_co2",
+        "alarm_co2",
+        "measure_voc",
+        "alarm_voc",
+        "measure_humidity",
+        "alarm_humidity",
+        "measure_temperature",
+        "alarm_temperature",
+        "measure_pressure",
+        "measure_luminance"
+      ],
+      "energy": {
+        "batteries": [
+          "AA",
+          "AA"
+        ]
+      },
+      "id": "bluetooth_wave_plus",
+      "settings": [
+        {
+          "type": "group",
+          "label": {
+            "en": "Radon"
+          },
+          "children": [
+            {
+              "id": "radon_units",
+              "type": "dropdown",
+              "label": {
+                "en": "Display units"
+              },
+              "value": "metric",
+              "values": [
+                {
+                  "id": "metric",
+                  "label": {
+                    "en": "Bq/m³"
+                  }
+                },
+                {
+                  "id": "imperial",
+                  "label": {
+                    "en": "pCi/L"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "radon_threshold",
+              "type": "number",
+              "label": {
+                "en": "Alarm threshold"
+              },
+              "hint": {
+                "en": "< 100 is great, 100 - 150 is okay and >= 150 is bad."
+              },
+              "value": 150,
+              "min": 1,
+              "step": 1,
+              "units": {
+                "en": "Bq/m³"
+              }
+            },
+            {
+              "id": "radon_us_threshold",
+              "type": "number",
+              "label": {
+                "en": "Alarm threshold"
+              },
+              "hint": {
+                "en": "< 2.5 is great, 2.5 - 4 is okay and >= 4 is bad."
+              },
+              "value": 4,
+              "min": 0.1,
+              "step": 0.1,
+              "units": {
+                "en": "pCi/L"
+              }
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "label": {
+            "en": "CO2"
+          },
+          "children": [
+            {
+              "id": "co2_threshold",
+              "type": "number",
+              "label": {
+                "en": "Alarm threshold"
+              },
+              "hint": {
+                "en": "< 800 is great, 180 - 1000 is okay and >= 1000 is bad."
+              },
+              "value": 1000,
+              "min": 1,
+              "units": {
+                "en": "ppm"
+              }
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "label": {
+            "en": "VOC"
+          },
+          "children": [
+            {
+              "id": "voc_threshold",
+              "type": "number",
+              "label": {
+                "en": "Alarm threshold"
+              },
+              "hint": {
+                "en": "< 250 is great, 250 - 2000 is okay and >= 2000 is bad."
+              },
+              "value": 2000,
+              "min": 1,
+              "units": {
+                "en": "ppb"
+              }
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "label": {
+            "en": "Humidity"
+          },
+          "children": [
+            {
+              "id": "humidity_high_threshold",
+              "type": "number",
+              "label": {
+                "en": "High alarm threshold"
+              },
+              "hint": {
+                "en": "< 60 is great, 60 - 70 is okay and >= 70 is bad."
+              },
+              "value": 70,
+              "min": 50,
+              "max": 100,
+              "units": {
+                "en": "%"
+              }
+            },
+            {
+              "id": "humidity_low_threshold",
+              "type": "number",
+              "label": {
+                "en": "Low alarm threshold"
+              },
+              "hint": {
+                "en": "< 25 is bad, 25 - 30 is okay and >= 30 is great."
+              },
+              "value": 25,
+              "min": 0,
+              "max": 50,
+              "units": {
+                "en": "%"
+              }
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "label": {
+            "en": "Temperature"
+          },
+          "children": [
+            {
+              "id": "temperature_high_threshold",
+              "type": "number",
+              "label": {
+                "en": "High alarm threshold"
+              },
+              "hint": {
+                "en": "< 18 is cold, 18 - 25 is okay and >= 25 is hot."
+              },
+              "value": 25,
+              "units": {
+                "en": "°C"
+              }
+            },
+            {
+              "id": "temperature_low_threshold",
+              "type": "number",
+              "label": {
+                "en": "Low alarm threshold"
+              },
+              "hint": {
+                "en": "< 18 is cold, 18 - 25 is okay and >= 25 is hot."
+              },
+              "value": 18,
+              "units": {
+                "en": "°C"
+              }
+            }
+          ]
+        }
+      ]
+    },
     {
       "platforms": [
         "local",
@@ -891,7 +1479,7 @@
               "id": "temperature_low_threshold",
               "type": "number",
               "label": {
-                "en": "High alarm threshold"
+                "en": "Low alarm threshold"
               },
               "hint": {
                 "en": "< 18 is cold, 18 - 25 is okay and >= 25 is hot."
@@ -1232,7 +1820,7 @@
               "id": "temperature_low_threshold",
               "type": "number",
               "label": {
-                "en": "High alarm threshold"
+                "en": "Low alarm threshold"
               },
               "hint": {
                 "en": "< 18 is cold, 18 - 25 is okay and >= 25 is hot."

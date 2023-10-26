@@ -2,5 +2,7 @@
   "unavailable": "This device hasn't reported values for a while and is marked as unavailable. Please verify its internet connection.",
   "no": "No",
   "yes": "Yes",
-  "duplicated": "This device is duplicated by another device on your Homey. It can be removed safely."
+  "duplicated": "This device is duplicated by another device on your Homey. It can be removed safely.",
+  "unavailable_ble": "Homey has been unable to communicate with this device for a while and it has been marked as unavailable. Please check the connectivity and battery charge.",
+  "unavailable_ble_startup": "Homey has not yet found this device since app start. Please check the connectivity and battery charge."
 }
